@@ -29,6 +29,16 @@ textarea {
 	font-weight: bold;
 }
 
-.controls {
-	border: 5px solid black;
+#controls { 
+	display: inline-block; 
 }
+
+#controlscontainer { 
+	text-align: center; 
+}
+
+fieldset {
+	border: 5px solid black;
+	display: inline-block;
+}
+
