@@ -4,11 +4,12 @@
 	<title> ASCIImation </title>
 	<link rel="stylesheet" href="ascii.css">
 	<script type="text/javascript" src="ascii.js"></script>
+	<script type="text/javascript" src="animations.js"></script>
 </head>
 <body>
 	<h1> CSCI 342 ASCII Animation Viewer </h1>
 	
-	<textarea name="viewer" rows="20" cols="80"></textarea>
+	<textarea id="viewport" name="viewer" rows="20" cols="80"></textarea>
 	
 	<div id="controlscontainer">
 	<div id="controls">
@@ -22,11 +23,11 @@
 	<fieldset> 
 		<legend>Animations:</legend>
 		<select onchange="changeAnimation(this.value)">
-			<option selected value="">Blank</option>
-			<option value="exercise.js">Exercise</option>
-			<option value="juggler.js">Juggler</option>
-			<option value="bike.js">Bike</option>
-			<option value="dive.js">Dive</option>
+			<option selected value="Blank">Blank</option>
+			<option value="Exercise">Exercise</option>
+			<option value="Juggler">Juggler</option>
+			<option value="Bike">Bike</option>
+			<option value="Dive">Dive</option>
 			<option value="custom.js">Custom</option>
 		</select>
 	</fieldset>

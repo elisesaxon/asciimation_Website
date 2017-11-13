@@ -7,7 +7,7 @@ function stop() {
 }
 
 function changeAnimation(choice) {
-	alert("ANNNNNNIMATE: " + choice);
+	document.getElementById("viewport").value=ANIMATIONS[choice];
 }
 
 function changeFontSize(newSize) {
