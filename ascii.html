@@ -3,7 +3,7 @@
 <head>
 	<title> ASCIImation </title>
 	<link rel="stylesheet" href="ascii.css">
-	<script> src="ascii.js", "animations.js", "myanimation.js" </script>
+	<script type="text/javascript" src="ascii.js"></script>
 </head>
 <body>
 	<h1> CSCI 342 ASCII Animation Viewer </h1>
@@ -15,8 +15,8 @@
 
 	<fieldset> 
 		<legend>Controls:</legend>
-		<button type="button" onclick="startFunc()">Start</button>
-		<button type="button" onclick="stopFunc()">Stop</button>
+		<button type="button" onclick="start()">Start</button>
+		<button type="button" onclick="stop()">Stop</button>
 	</fieldset>
 	
 	<fieldset> 
@@ -45,12 +45,11 @@
 	
 	<fieldset> 
 		<legend>Speed:</legend>
-		<input type="checkbox" onchange="speedChange()" value="Turbo">Turbo
+		<input type="checkbox" onchange="speedChange(this)" value="Turbo" />Turbo
 	</fieldset>
 	
 	</div>
 	</div>
-	
 	
 </body>
 </html>
