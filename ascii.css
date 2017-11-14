@@ -18,7 +18,7 @@ p {
 	font-weight: bold;
 }
 
-textarea {
+#viewport {
 	width: 90%;
 	height: 400px;
 	display: block;
