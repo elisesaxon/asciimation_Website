@@ -1,12 +1,14 @@
 var loopingvar;
+var scenes;
 var sceneidx = -1;
+var speed = 250;
+
 
 function start() {
-	var scenes = document.getElementById("viewport").value.split("=====\n");
-    loopingvar = setInterval(loop, 250, scenes);
+    loopingvar = setInterval(loop, speed);
 }
 
-function loop(scenes) {
+function loop() {
 	if(sceneidx < (scenes.length - 1)) {
 		sceneidx++;
 	} else {
@@ -17,11 +19,13 @@ function loop(scenes) {
 }
 
 function stop() {
-	clearInterval(loopingvar);
+    clearInterval(loopingvar);
 }
 
 function changeAnimation(choice) {
 	document.getElementById("viewport").value = ANIMATIONS[choice];
+	
+	scenes = document.getElementById("viewport").value.split("=====\n");
 }
 
 function changeFontSize(newSize) {
@@ -30,10 +34,8 @@ function changeFontSize(newSize) {
 
 function speedChange(box) {
 	if(box.checked) {
-		//make it turbo (50 ms delay)
-		//setInterval("start()", 50);
+		speed = 50;
 	} else {
-		//make it normal (250 ms delay)
-		//setInterval("start()", 250);
+		speed = 250;
 	}
 }
