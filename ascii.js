@@ -1,3 +1,5 @@
+"use strict";
+
 var loopingvar;
 var scenes;
 var sceneidx = -1;
