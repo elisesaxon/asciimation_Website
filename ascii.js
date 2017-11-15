@@ -21,6 +21,7 @@ function loop() {
 
 function stop() {
     clearInterval(loopingvar);
+    loopingvar = 0;
 }
 
 function changeAnimation(choice) {
@@ -39,6 +40,9 @@ function speedChange(box) {
 	} else {
 		speed = 250;
 	}
-	stop();
-	start();
+	
+	if(loopingvar) {
+		stop();
+		start();
+	}
 }
