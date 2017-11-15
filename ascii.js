@@ -5,6 +5,7 @@ var speed = 250;
 
 
 function start() {
+	// DON'T CAPTURE THE TEXT TO ANIMATE UNTIL THE USER PRESSES START BUTTON
     loopingvar = setInterval(loop, speed);
 }
 
@@ -38,4 +39,6 @@ function speedChange(box) {
 	} else {
 		speed = 250;
 	}
+	stop();
+	start();
 }
