@@ -5,7 +5,10 @@ var speed = 250;
 
 
 function start() {
-	// DON'T CAPTURE THE TEXT TO ANIMATE UNTIL THE USER PRESSES START BUTTON
+	if(!scenes) {
+		scenes = document.getElementById("viewport").value.split("=====\n");
+	}
+	
     loopingvar = setInterval(loop, speed);
 }
 
@@ -27,7 +30,7 @@ function stop() {
 function changeAnimation(choice) {
 	document.getElementById("viewport").value = ANIMATIONS[choice];
 	
-	scenes = document.getElementById("viewport").value.split("=====\n");
+	scenes = 0;
 }
 
 function changeFontSize(newSize) {
