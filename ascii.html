@@ -16,13 +16,13 @@
 
 	<fieldset> 
 		<legend>Controls:</legend>
-		<button type="button" onclick="start()">Start</button>
-		<button type="button" onclick="stop()">Stop</button>
+		<button id="startbutton" type="button" onclick="start()">Start</button>
+		<button id="stopbutton" disabled type="button" onclick="stop()">Stop</button>
 	</fieldset>
 	
 	<fieldset> 
 		<legend>Animations:</legend>
-		<select onchange="changeAnimation(this.value)">
+		<select id="animationmenu" onchange="changeAnimation(this.value)">
 			<option selected value="Blank">Blank</option>
 			<option value="Exercise">Exercise</option>
 			<option value="Juggler">Juggler</option>
